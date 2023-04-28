@@ -1,0 +1,80 @@
+﻿<Page x:Class="E1.forms"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:E1"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="forms">
+
+    <Border Background="White" Padding="15" Margin="150,70,0,0">
+        <StackPanel>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions >
+
+                <Button x:Name="Applybutton" Click="Applybutton_Click" Margin="0,0,20,0" Grid.Column="0" Content="submit"/>
+                <Button x:Name="Applyreset"  Click="Applyreset_Click" Margin="0,0,20,0" Grid.Column="1" Content="Reset"/>
+                <Button Margin="0,0,20,0" Grid.Column="2" Content="submit"/>
+            </Grid>
+
+            <TextBlock Text="Default form" FontWeight="Bold" Padding="5"/>
+
+            <TextBlock Text="Basic form layout" Padding="5"/>
+
+            <TextBox x:Name="BasicformlayoutText" Padding="2.5"/>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.Column="1" Margin="0,0,400,0">
+                    <TextBlock Text="status"/>
+                    <TextBox x:Name="statusText" Background="WhiteSmoke" Padding="2.5"/>
+                </StackPanel>
+
+                <StackPanel Grid.Column="1" Margin="450 0 0 0">
+                    <TextBlock Text="revision"/>
+                    <TextBox x:Name="suppliernamettext" TextChanged="suppliernametext_TextChanged" Background="WhiteSmoke" Padding="2.5"/>
+                </StackPanel>
+            </Grid>
+
+            <TextBlock Text="Material"/>
+            <ComboBox Padding="2.5"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.Column="0" Margin="0 0 10 0">
+                    <TextBlock Text="Albhabets"/>
+                    <CheckBox x:Name="Abox" Content="A"/>
+                    <CheckBox x:Name="Bbox" Content="B"/>
+                    <CheckBox x:Name="Cbox" Content="C"/>
+                    <CheckBox x:Name="Dbox" Content="D"/>
+                </StackPanel>
+
+                <StackPanel Grid.Column="1" Margin="0,19,0,-15">
+                    <CheckBox Content="A"/>
+                    <CheckBox Content="B"/>
+                    <CheckBox Content="C"/>
+                    <CheckBox Content="D"/>
+                </StackPanel>
+            </Grid>
+
+            <TextBlock Text="Finish"/>
+            <ComboBox Padding="2">
+                <ComboBoxItem>Done</ComboBoxItem>
+                <ComboBoxItem>Remains</ComboBoxItem>
+            </ComboBox>
+
+        </StackPanel>
+    </Border>
+</Page>

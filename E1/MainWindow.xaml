@@ -1,0 +1,321 @@
+﻿<Window x:Class="E1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:E1"
+        xmlns:fa="http://schemas.fontawesome.io/icons/"
+        xmlns:wpf="clr-namespace:LiveCharts;assembly=LiveCharts"
+        mc:Ignorable="d"
+        Title="MainWindowView" Height="1400" Width="1300"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        Background="WhiteSmoke"
+        BorderBrush="Black">
+
+
+    <ScrollViewer>
+        <Border Background="#DCDCDC" Margin="0,0,0,-10">
+            <Grid Height="1385" VerticalAlignment="Top" ScrollViewer.HorizontalScrollBarVisibility="Visible" ScrollViewer.CanContentScroll="True">
+                <Grid.Background>
+                    <ImageBrush/>
+                </Grid.Background>
+                <Grid.ColumnDefinitions>
+                    <!--Navigation menu-->
+                    <ColumnDefinition Width="auto"/>
+                    <!--Content section-->
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Border Background="White" Margin="5,0,0,5">
+                    <StackPanel>
+                        <Label Content="Purple" VerticalAlignment="Top" HorizontalAlignment="Center"
+                       FontSize="30" FontWeight="Bold" Foreground="Purple"/>
+                        <Ellipse Width="60" Height="60" VerticalAlignment="Top" HorizontalAlignment="Left"
+                         Margin="20 70 0 0">
+                            <Ellipse.Fill>
+                                <ImageBrush ImageSource="C:\Users\40743\Downloads\face1.jpg" />
+                            </Ellipse.Fill>
+                        </Ellipse>
+                        <Label Content="  David Gray.H" HorizontalAlignment="Center" FontWeight="Bold"
+                          FontSize="20" Margin="10 -55 0 0"/>
+                        <Label Content=" Project manager" Foreground="Black" FontWeight="DemiBold" Width="148" FontSize="18" Margin="0 -30 -20 -20"/>
+                        <fa:FontAwesome Icon="Bookmark" Foreground="Green"  Margin="-20 -65 -250 0" FontSize="25"  Width="22" Height="27"/>
+
+                        <Button  Width="250" Height="50" Margin="20" Background="White" BorderBrush="White">
+                            <Button.Content>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="Dashboard " VerticalAlignment="Center" FontSize="20" FontWeight="DemiBold" Foreground="Purple" Width="217"/>
+                                    <fa:FontAwesome Foreground="Purple" HorizontalAlignment="Left" FontSize="30" Icon="Home"/>
+                                </StackPanel>
+                            </Button.Content>
+                        </Button>
+
+                        <Button  Width="250" Height="50" Margin="20" Background="White" BorderBrush="White">
+                            <Button.Content>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="Basic UI  Element" VerticalAlignment="Center" FontSize="20" FontWeight="DemiBold" Foreground="Black" Width="217" Cursor="Hand"/>
+                                    <fa:FontAwesome Foreground="#FFA9A9A9" HorizontalAlignment="Left" FontSize="25" Icon="ChevronCircleLeft"/>
+                                </StackPanel>
+                            </Button.Content>
+                        </Button>
+
+                        <Button   Width="250" Height="50" Margin="20" Background="White" BorderBrush="White">
+                            <Button.Content>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="Icons" VerticalAlignment="Center" FontSize="20" FontWeight="DemiBold" Foreground="Black" Width="217" Cursor="Hand"/>
+                                    <fa:FontAwesome Foreground="#FFA9A9A9" HorizontalAlignment="Left" FontSize="20" Icon="AddressBook"/>
+                                </StackPanel>
+                            </Button.Content>
+                        </Button>
+
+                        <Button  Width="250" Height="50" Margin="20" Background="White" BorderBrush="White">
+                            <Button.Content>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="Forms" VerticalAlignment="Center" FontSize="20" FontWeight="DemiBold" Foreground="Black" Width="217" Cursor="Hand"/>
+                                    <fa:FontAwesome Foreground="#FFA9A9A9" HorizontalAlignment="Left" FontSize="30" Icon="Bars"/>
+                                </StackPanel>
+                            </Button.Content>
+                        </Button>
+
+                        <Button  Width="250" Height="50" Margin="20" Background="White" BorderBrush="White">
+                            <Button.Content>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="Charts" VerticalAlignment="Center" FontSize="20" FontWeight="DemiBold" Foreground="Black" Width="217" Cursor="Hand"/>
+                                    <fa:FontAwesome Foreground="#FFA9A9A9" HorizontalAlignment="Left" FontSize="30" Icon="BarChart"/>
+                                </StackPanel>
+                            </Button.Content>
+                        </Button>
+
+                        <Button  Width="250" Height="50" Margin="20" Background="White" BorderBrush="White">
+                            <Button.Content>
+                                <StackPanel Orientation="Horizontal" Cursor="Hand">
+                                    <TextBlock Text="Table" VerticalAlignment="Center" FontSize="20" FontWeight="DemiBold" Foreground="Black" Width="217"/>
+                                    <fa:FontAwesome Foreground="#FFA9A9A9" HorizontalAlignment="Left" FontSize="30" Icon="Table"/>
+                                </StackPanel>
+                            </Button.Content>
+                        </Button>
+
+                        <Button  Width="250" Height="50" Margin="20" Background="Transparent" BorderBrush="White">
+                            <Button.Content>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="Sample Pages" VerticalAlignment="Center" FontSize="20" FontWeight="DemiBold" Foreground="Black" Width="217"/>
+                                    <fa:FontAwesome Foreground="#FFA9A9A9" HorizontalAlignment="Left" FontSize="30" Icon="ShoppingBag"/>
+                                </StackPanel>
+                            </Button.Content>
+                        </Button>
+
+                        <Button  Width="250" Height="50" Margin="20" Background="White" BorderBrush="White" Cursor="Hand">
+                            <Button.Content>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="Project " VerticalAlignment="Center" FontSize="20" FontWeight="DemiBold" Foreground="Black" Width="259"/>
+
+                                </StackPanel>
+                            </Button.Content>
+                        </Button>
+
+
+                        <Button  Width="250"  Height="60" Margin="20" Background="Purple" BorderBrush="White">
+                            <Button.Content>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="+ Add a project" VerticalAlignment="Center" FontSize="25" FontWeight="DemiBold" Foreground="#ffff" Width="217"/>
+
+                                </StackPanel>
+                            </Button.Content>
+                        </Button>
+
+                        <Button  Width="250" Height="50" Margin="20" Background="White" BorderBrush="White">
+                            <Button.Content>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="Catergories " VerticalAlignment="Center" FontSize="25" FontWeight="DemiBold" Foreground="#DCDCDC" Width="217"/>
+
+                                </StackPanel>
+                            </Button.Content>
+                        </Button>
+
+                        <Button  Width="250" Height="50" Margin="20" Background="White" BorderBrush="White">
+                            <Button.Content>
+                                <StackPanel Orientation="Horizontal">
+                                    <fa:FontAwesome Foreground="Orange" HorizontalAlignment="Left" FontSize="30" Icon="CircleOutline"/>
+                                    <TextBlock Text="        Free"  HorizontalAlignment="Right" FontSize="20" FontWeight="DemiBold" Foreground="Black" Width="217"/>
+                                </StackPanel>
+                            </Button.Content>
+                        </Button>
+
+                        <Button  Width="250" Height="50" Margin="20" Background="White" BorderBrush="White">
+                            <Button.Content>
+                                <StackPanel Orientation="Horizontal">
+                                    <fa:FontAwesome Foreground="SkyBlue" HorizontalAlignment="Left" FontSize="30" Icon="CircleOutline"/>
+                                    <TextBlock Text="        Pro"  HorizontalAlignment="Right" FontSize="20" FontWeight="DemiBold" Foreground="Black" Width="217"/>
+                                </StackPanel>
+                            </Button.Content>
+                        </Button>
+                    </StackPanel>
+                </Border>
+
+
+                <Grid Height="65" Background="White" VerticalAlignment="Top" Margin="0,0,-2,0" Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <!--Navigation menu-->
+                        <RowDefinition Height="auto"/>
+                        <!--Content section-->
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+
+                    <Grid Margin="-15,0,740,0" Background="Transparent">
+                        <TextBlock Margin="40,0,48,0" Foreground="#b0b9c6" IsHitTestVisible="False"
+                          FontSize="20" Background="Transparent"     Panel.ZIndex="1" Text="       search Project...." Height="30" VerticalAlignment="Center" Cursor="Hand"/>
+                        <TextBox BorderBrush="Transparent" x:Name="txtsearch" Margin="55,25,0,25"/>
+                        <fa:FontAwesome Icon="Search" Foreground="#FFA9A9A9" Margin="45,25,0,25" FontSize="20" HorizontalAlignment="Left"/>
+                    </Grid>
+                    <Grid Margin="200,0,505,0">
+                        <StackPanel>
+                            <Ellipse Width="43" Height="40" HorizontalAlignment="Stretch" Margin="-200 15 0 0">
+                                <Ellipse.Fill>
+                                    <ImageBrush ImageSource="C:\Users\40743\Downloads\face1.jpg" />
+                                </Ellipse.Fill>
+                            </Ellipse>
+                            <TextBlock Text="David Gray.."  FontSize="20" Height="72" Margin="-150" HorizontalAlignment="Stretch" RenderTransformOrigin="0.5,0.5" Width="136"/>
+                        </StackPanel>
+                    </Grid>
+                    <Button x:Name="exit" Click="exit_Click" Background="White" BorderBrush="White" Margin="811,0,123,0" Height="67" VerticalAlignment="Center">
+                        <Button.Content>
+                            <StackPanel Orientation="Horizontal">
+                                <fa:FontAwesome Icon="PowerOff" Foreground="#FFA9A9A9"  FontSize="25" Width="23" Height="27"/>
+                            </StackPanel>
+                        </Button.Content>
+                    </Button>
+
+                    <fa:FontAwesome Icon="Bars" Foreground="#FFA9A9A9" FontSize="25"  HorizontalAlignment="Left" Margin="875,21,0,0" Grid.RowSpan="2" Width="115" />
+                    <fa:FontAwesome Icon="Bell" FontSize="25" Foreground="#FFA9A9A9" HorizontalAlignment="Left" Margin="740,20,0,15" Width="auto"/>
+                    <fa:FontAwesome Icon="Envelope" FontSize="25" Foreground="#FFA9A9A9" HorizontalAlignment="Left" Margin="640,20,0,15" Width="auto"/>
+                    <fa:FontAwesome Icon="Expand"  FontSize="25" Foreground="#FFA9A9A9" HorizontalAlignment="Left" Margin="540,20,0,15" Width="auto"/>
+
+                </Grid>
+                <Border CornerRadius="10" Grid.Column="1"  HorizontalAlignment="Left" Height="190" Margin="25,120,0,0" 
+                  VerticalAlignment="Top" Width="290"   Cursor="Hand">
+                    <Border.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="White" Offset="1"/>
+                            <GradientStop Color="#FFE37C0F"/>
+                            <GradientStop Color="#FFE60648" Offset="0.993"/>
+                            <GradientStop Color="#FFFF0B41" Offset="0.345"/>
+                        </LinearGradientBrush>
+                    </Border.Background>
+                    <TextBox Foreground="White" FontWeight="SemiBold" FontSize="40" Background="Transparent"  BorderBrush="Transparent" HorizontalAlignment="Left" Height="65"  TextWrapping="Wrap" Text="$86,0000" VerticalAlignment="Top" Width="200" Margin="60,65,0,0"/>
+                </Border>
+                <TextBox Grid.Column="1"  Foreground="White" FontSize="20" BorderBrush="Transparent" HorizontalAlignment="Left" Height="25" Margin="95,155,0,0" TextWrapping="Wrap" Text="Weekly Sales" Background="Transparent" VerticalAlignment="Top" Width="auto" FontWeight="DemiBold"/>
+                <TextBox Grid.Column="1"  Foreground="White" BorderBrush="Transparent" HorizontalAlignment="Left" Height="35" Margin="90,245,0,0" TextWrapping="Wrap" Text="Increased by 60%" Background="Transparent" VerticalAlignment="Top" FontSize="20" Width="180" FontWeight="DemiBold"/>
+
+                <Border CornerRadius="10" Grid.Column="1"  HorizontalAlignment="Center" Height="190" Margin="0,120,0,0" 
+                VerticalAlignment="Top" Width="290"  >
+                    <Border.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="Black"/>
+                            <GradientStop Color="#FF0906FA" Offset="0"/>
+                        </LinearGradientBrush>
+                    </Border.Background>
+                </Border>
+                <TextBox Grid.Column="1" Foreground="White" FontWeight="SemiBold" FontSize="20" Background="Transparent"  BorderBrush="Transparent" HorizontalAlignment="Left" Height="35" Margin="415,145,0,0"  TextWrapping="Wrap" Text="Weekly  Ordrer" VerticalAlignment="Top" Width="auto"/>
+                <TextBox Grid.Column="1" Foreground="White" FontWeight="SemiBold" FontSize="40" Background="Transparent"  BorderBrush="Transparent" HorizontalAlignment="Left" Height="60" Margin="425,180,0,0"  TextWrapping="Wrap" Text="45,0000" VerticalAlignment="Top" Width="auto"/>
+                <TextBox Grid.Column="1" Foreground="White" FontWeight="SemiBold" FontSize="20" Background="Transparent"  BorderBrush="Transparent" HorizontalAlignment="Left" Height="40" Margin="420,250,0,0"  TextWrapping="Wrap" Text="Decreased by 10%" VerticalAlignment="Top" Width="auto"/>
+                <Border CornerRadius="10" Grid.Column="1"  HorizontalAlignment="Left" Height="190" Margin="660,120,0,0" 
+                VerticalAlignment="Top" Width="290"   >
+                    <Border.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="Black"/>
+                            <GradientStop Color="#FF0FEC03" Offset="1"/>
+                            <GradientStop Color="#FF099301" Offset="0"/>
+                        </LinearGradientBrush>
+                    </Border.Background>
+                </Border>
+
+                <TextBox Grid.Column="1" Foreground="White" FontWeight="SemiBold" FontSize="20" Background="Transparent"  BorderBrush="Transparent" HorizontalAlignment="Left" Height="35" Margin="730,145,0,0"  TextWrapping="Wrap" Text="Visitors Online" VerticalAlignment="Top" Width="145"/>
+                <TextBox Grid.Column="1" Foreground="White" FontWeight="SemiBold" FontSize="40" Background="Transparent"  BorderBrush="Transparent" HorizontalAlignment="Left" Height="60" Margin="740,180,0,0"  TextWrapping="Wrap" Text="95,3648" VerticalAlignment="Top" Width="165"/>
+                <TextBox Grid.Column="1" Foreground="White" FontWeight="SemiBold" FontSize="20" Background="Transparent"  BorderBrush="Transparent" HorizontalAlignment="Left" Height="30" Margin="730,250,0,0"  TextWrapping="Wrap" Text="Increased by 10%" VerticalAlignment="Top" Width="185"/>
+                <fa:FontAwesome Icon="Bookmark" Foreground="White" FontSize="20" Height="35" VerticalAlignment="Top" Margin="560,150,385,0" Grid.Column="1" RenderTransformOrigin="0.5,0.5">
+                    <fa:FontAwesome.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="0.052"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </fa:FontAwesome.RenderTransform>
+                </fa:FontAwesome>
+                <fa:FontAwesome Icon="Diamond" Foreground="White" FontSize="20" Height="50" VerticalAlignment="Top" Margin="870,150,75,0" Grid.Column="1" RenderTransformOrigin="0.5,0.5">
+                    <fa:FontAwesome.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="0.052"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </fa:FontAwesome.RenderTransform>
+                </fa:FontAwesome>
+
+                <Border CornerRadius="10" Background="White" BorderBrush="White" BorderThickness="1" Grid.Column="1" HorizontalAlignment="Center" Height="575" Margin="0,330,0,0" VerticalAlignment="Top" Width="924">
+                    <StackPanel HorizontalAlignment="Left">
+                        <TextBox BorderBrush="Transparent" HorizontalAlignment="Left" Background="Transparent" Height="55" TextWrapping="Wrap" FontSize="30" Text="Recent Updates" FontWeight="Bold" Width="234"/>
+                        <Grid Height="29" Width="919">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition Width="auto"/>
+                            </Grid.ColumnDefinitions >
+                            <fa:FontAwesome Icon="AddressBook"  Background="Transparent" Width="20" Foreground="#DCDCDC" Height="20" Grid.Column="0"/>
+                            <TextBox Text="Jack Menqu" BorderBrush="Transparent" Foreground="#DCDCDC" Grid.Column="1"/>
+                            <fa:FontAwesome Icon="ClockOutline" Foreground="#DCDCDC" FontSize="20" Grid.Column="2"/>
+                            <TextBox Text="Octomber 3rd, 2018" BorderBrush="Transparent" Foreground="#DCDCDC" Grid.Column="4"/>
+                        </Grid>
+
+                        <Grid Height="29" Width="919">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition Width="auto"/>
+                            </Grid.ColumnDefinitions >
+                            <Image Source="/Image1.png" Grid.Column="1" Margin="14,0,15,-186" Stretch="Fill"/>
+                            <Image Source="/Image2.png" Margin="20,0,8,-186"  Stretch="Fill"/>
+                        </Grid>
+                        <Grid  Height="35" Width="919" >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions >
+                            <Image Source="/Image3.png" Grid.Column="1" Margin="14,201,15,-387" Stretch="Fill"/>
+                            <Image Source="/Image4.png" Margin="20,201,8,-387" Stretch="Fill"/>
+                        </Grid>
+                    </StackPanel>
+                </Border>
+                <Border CornerRadius="10" BorderBrush="White" BorderThickness="1" 
+                    Grid.Column="1" Margin="0,925,0,0" Width="924" Cursor="Hand" HorizontalAlignment="Center">
+                    <StackPanel Background="White" Margin="0,0,0,-4">
+                        <TextBlock Text=" Project Status" FontWeight="Bold" Margin="15" FontSize="25" Width="884" Height="49"/>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="371*"/>
+                                <ColumnDefinition Width="551*"/>
+                            </Grid.ColumnDefinitions>
+                            <DataGrid x:Name="tables"  BorderBrush="Transparent" FontSize="25" Margin="42,-18,230,2" Grid.ColumnSpan="2">
+                                <DataGrid.Columns >
+                                    <DataGridTextColumn  Header="id" Binding="{Binding id}" Width="100" />
+                                    <DataGridTextColumn Header="Name" Binding="{Binding Name}"  Width="200"  />
+                                    <DataGridTextColumn Header="Due Date" Binding="{Binding Duedate}"  Width="180" />
+                                    <DataGridTextColumn Header="Progress" Binding="{Binding Progress}" Width="120" />
+                                </DataGrid.Columns>
+
+                                <DataGrid.Resources>
+                                    <Style TargetType="{x:Type DataGridColumnHeader}">
+                                        <Setter Property="FontWeight" Value="SemiBold"/>
+                                    </Style>
+                                </DataGrid.Resources>
+                            </DataGrid>
+                        </Grid>
+                    </StackPanel>
+                </Border>
+            </Grid>
+        </Border>
+    </ScrollViewer>
+</Window>
+    
